@@ -21,7 +21,7 @@ let difficulty = "hard";
  *
  */
 function randomInteger(min, max) {
-  // return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 /**
@@ -40,8 +40,22 @@ function randomInteger(min, max) {
  *
  */
 function setDelay(difficulty) {
-  // TODO: Write your code here.
-  
+  // Return delay (ms) based on difficulty
+  if (difficulty === 'easy') {
+    return 1500;
+  }
+
+  if (difficulty === 'normal') {
+    return 1000;
+  }
+
+  if (difficulty === 'hard') {
+    // return a random integer between 600 (inclusive) and 1199 (inclusive)
+    return randomInteger(600, 1199);
+  }
+
+  // default to normal if unknown difficulty
+  return 1000;
 }
 
 /**
@@ -59,8 +73,18 @@ function setDelay(difficulty) {
  * chooseHole(holes) //> returns one of the 9 holes that you defined
  */
 function chooseHole(holes) {
-  // TODO: Write your code here.
+  // generate a random index based on number of holes
+  const index = randomInteger(0, holes.length - 1);
+  const hole = holes[index];
 
+  // if we picked the same hole as last time, try again
+  if (hole === lastHole) {
+    return chooseHole(holes);
+  }
+
+  // track last hole and return it
+  lastHole = hole;
+  return hole;
 }
 
 /**
