@@ -128,8 +128,8 @@ function gameOver() {
 *
 */
 function showUp() {
-  let delay = 0; // TODO: Update so that it uses setDelay()
-  const hole = 0;  // TODO: Update so that it use chooseHole()
+  let delay = setDelay(difficulty); // use configured difficulty to get delay
+  const hole = chooseHole(holes);  // pick a random hole element
   return showAndHide(hole, delay);
 }
 
