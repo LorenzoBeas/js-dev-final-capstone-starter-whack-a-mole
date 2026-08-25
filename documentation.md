@@ -20,4 +20,15 @@
  3. Implemented gameover function which uses an if statement to check if the time is greater than 0 if so then showUp() gets called again so that another mole can be shown with its respective delay  until the time runs out 
 
  4. Implemented the start game  function which runs through a sequence of functions to set the conditions for the game flow to initialize. ClearScore, setDuration, setEventListeners, startTimer, showUp
+
+
+ ### US-04: Whack!
+
+ 1. utilized the math operator += 1 to increment the score +1 point and the provided line socre.textContent to change the text inside the HTML element "score" 
+
+ 2. utilized the assignment operator to set the score to 0  in the clear score function 
+
+ 3. for the whack event I passed in the update score function to be executed 
+
+ 4. for the event listener function, there needs to be one listener per mole so I utilized a forEach function and an event handler inside
  
