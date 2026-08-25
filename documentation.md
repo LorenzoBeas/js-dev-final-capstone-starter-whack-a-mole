@@ -1,34 +1,41 @@
 ### US-01 - Basic game structure
-- Added title of game the theme of this game will be boop a cat instead of whack a mole so I set the title accordingly 
-- Implemented 9 holes but once the game is complete i will personalize this and change moles to cats 
-- Added and defined start button 
-- utilized query selector to access the elements in index.js 
+- Added a title for the game. The theme of this game will be Boop a Cat instead of Whack-a-Mole, so I set the title accordingly.
+- Implemented 9 holes. Once the game is complete, I will personalize it and change the moles to cats.
+- Added and defined the start button.
+- Utilized query selectors to access the elements in index.js.
 
 ### US-02 - Basic game functionality: Randomness
 
-1. Defined the random integer function this will be used by the set Delay function when the difficulty is set to hard 
+1. Defined the random integer function. This will be used by the setDelay function when the difficulty is set to hard.
 
-2. setDelay function implemented this will dictate how fast the cats show up depending on the dificulty selected. Utilized if statements to process the dificulty parameter that is chosen and from there set the speed of the game
+2. Implemented the setDelay function. This dictates how fast the cats show up depending on the difficulty selected. I utilized if statements to process the difficulty parameter and set the speed of the game.
 
-3. ChooseHole function also uses random integer function retrieve a random number between 0 and 8 which will mark a hole element from the holes array
+3. The chooseHole function also uses the random integer function to retrieve a random number between 0 and 8. This number selects a hole element from the holes array.
  ### US-03 - Game flow
 
- 1. populated toggleVisibility function by using thr classList.toggle() javascript function and changed the value to 'show' 
+ 1. Populated the toggleVisibility function by using the classList.toggle() JavaScript method with the value 'show'.
 
- 2. Implemented showAndHide function which utilizes the setTimeout() with the provided delay again to hide the cat and then gameOver() gets called 
+ 2. Implemented the showAndHide function, which uses setTimeout() with the provided delay to hide the cat. After that, gameOver() is called.
 
- 3. Implemented gameover function which uses an if statement to check if the time is greater than 0 if so then showUp() gets called again so that another mole can be shown with its respective delay  until the time runs out 
+ 3. Implemented the gameOver function, which uses an if statement to check if the time is greater than 0. If it is, showUp() is called again so another mole can be shown with its respective delay until the time runs out.
 
- 4. Implemented the start game  function which runs through a sequence of functions to set the conditions for the game flow to initialize. ClearScore, setDuration, setEventListeners, startTimer, showUp
+ 4. Implemented the startGame function, which runs through a sequence of functions to initialize the game flow: clearScore, setDuration, setEventListeners, startTimer, and showUp.
 
 
  ### US-04: Whack!
 
- 1. utilized the math operator += 1 to increment the score +1 point and the provided line socre.textContent to change the text inside the HTML element "score" 
+ 1. Utilized the += operator to increment the score by 1 point and used score.textContent to change the text inside the HTML element "score".
 
- 2. utilized the assignment operator to set the score to 0  in the clear score function 
+ 2. Utilized the assignment operator to set the score to 0 in the clearScore function.
 
- 3. for the whack event I passed in the update score function to be executed 
+ 3. For the whack event, I passed in the updateScore function to be executed.
 
- 4. for the event listener function, there needs to be one listener per mole so I utilized a forEach function and an event handler inside
+ 4. For the event listener function, there needs to be one listener per mole, so I utilized a forEach function and added the whack event handler to each mole.
+
+
+ ### US-05: Timer
+
+ 1. Set the timer using the setInterval JavaScript method by passing updateTimer as the function and 1000 as the interval in milliseconds.
+
+ 2. Implemented the updateTimer function by using an if statement to check if the time is greater than 0. If true, it subtracts 1 from the value and uses timerDisplay.textContent to update the text inside the timer element.
  
