@@ -440,3 +440,8 @@ General code organization:
 - Start by completing the required HTML elements and then proceed to work on the JavaScript functions. It's recommended that you leave any CSS changes for last. Follow the order of the user stories.
 - If you are stuck, take a careful look at the provided resources. If you are still stuck, ask a friend or a mentor for help.
 - Read the user stories and tests carefully.
+
+
+### Student comments 
+
+- For documentation on implementation steps please see documentation.md

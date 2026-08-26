@@ -18,7 +18,7 @@ describe("US-01: Basic Game Structure", () => {
     await page.goto(baseURL, { waitUntil: "load" });
   });
 
-  it("has a title e.g. <h1 id='title'>Whack-a-Mole!!</h1>", async () => {
+  it("has a title e.g. <h1 id='title'>Boop a cat</h1>", async () => {
     const title = await page.evaluate(() => {
       const title = document.querySelectorAll("#title");
       return title.length;

@@ -39,3 +39,9 @@
 
  2. Implemented the updateTimer function by using an if statement to check if the time is greater than 0. If true, it subtracts 1 from the value and uses timerDisplay.textContent to update the text inside the timer element.
  
+
+ ### US-06: Originality
+
+ 1. I changed the theme of this game to be called boop a cat instead of Whack a mole, background setting takes place in a cozy lofi bedroom and I adjusted the song to match the aesthetic 
+
+ 2. I also changed the moles to be cats
